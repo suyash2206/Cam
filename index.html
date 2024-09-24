@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age and Gender Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Age and Gender Detection from Webcam</h1>
+
+    <div class="container">
+        <!-- Video Element for Webcam Stream -->
+        <video id="video" width="640" height="480" autoplay></video>
+
+        <!-- Capture Button -->
+        <button id="captureBtn">Capture Image</button>
+
+        <!-- Canvas for Capturing Image -->
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+
+        <!-- Preview Captured Image -->
+        <div id="preview">
+            <h2>Preview</h2>
+            <img id="capturedImage" alt="Captured Image will appear here" />
+        </div>
+
+        <!-- Age and Gender Detection Results -->
+        <div id="results">
+            <h2>Detected Information</h2>
+            <p id="ageResult">Age: Not detected</p>
+            <p id="genderResult">Gender: Not detected</p>
+        </div>
+
+        <!-- Download Button -->
+        <a id="downloadLink" style="display:none;" download="captured-image.png">Download Image</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
